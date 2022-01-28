@@ -1,20 +1,39 @@
 package ru.netology;
 
 public class PostData {
-    private String date;
+    private int id;
+    private int ownerId;
+    private int fromId;
+    private int createdBy;
+    private int date;
+    private int replyOwnerId;
+    private int replyPostId;
+    private String postType;
+    private Boolean friendsOnly;
     private String description;
-    private int likesCount;
-    private int commentsCount;
-    private int repostCount;
     private int viewsCount;
-    private ArticleData articleData;
-    private UserData userData;
+    private int signerId;
+    private Boolean canPin;
+    private Boolean canDelete;
+    private Boolean isPinned;
+    private Boolean canEdit;
+    private Boolean markedAsSds;
+    private Boolean isFavorite;
+    private int postponedId;
 
-    public String getDate() {
+    private Comments comments;
+    private Copyright copyright;
+    private Likes likes;
+    private Reposts reposts;
+    private PostSource postSource;
+    private Geo geo;
+    private Donut donut;
+
+    public int getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(int date) {
         this.date = date;
     }
 
@@ -26,29 +45,6 @@ public class PostData {
         this.description = description;
     }
 
-    public int getLikesCount() {
-        return likesCount;
-    }
-
-    public void setLikesCount(int likesCount) {
-        this.likesCount = likesCount;
-    }
-
-    public int getCommentsCount() {
-        return commentsCount;
-    }
-
-    public void setCommentsCount(int commentsCount) {
-        this.commentsCount = commentsCount;
-    }
-
-    public int getRepostCount() {
-        return repostCount;
-    }
-
-    public void setRepostCount(int repostCount) {
-        this.repostCount = repostCount;
-    }
 
     public int getViewsCount() {
         return viewsCount;
@@ -58,19 +54,12 @@ public class PostData {
         this.viewsCount = viewsCount;
     }
 
-    public ArticleData getArticleData() {
-        return articleData;
+
+    public Comments getComments() {
+        return comments;
     }
 
-    public void setArticleData(ArticleData articleData) {
-        this.articleData = articleData;
-    }
-
-    public UserData getUserData() {
-        return userData;
-    }
-
-    public void setUserData(UserData userData) {
-        this.userData = userData;
+    public void setComments(Comments comments) {
+        this.comments = comments;
     }
 }
